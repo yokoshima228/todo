@@ -1,0 +1,98 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #181818;
+  --vt-c-black-soft: #222222;
+  --vt-c-black-mute: #282828;
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+
+  /* New Dark Purple Theme Palette */
+  --color-bg: #1a1a2e; /* Dark blue/purple background */
+  --color-bg-soft: #2a2a4e;
+  --color-bg-mute: #3a3a6e;
+
+  --color-primary: #9b59b6; /* Primary purple */
+  --color-primary-soft: #8e44ad;
+
+  --color-accent: #e74c3c; /* Accent for delete button */
+
+  --color-text: #e0e0e0; /* Light text color */
+  --color-text-soft: #c0c0c0;
+
+  --color-border: var(--color-bg-mute);
+  --color-border-hover: var(--color-primary-soft);
+
+  --color-input-bg: var(--color-bg-soft);
+
+  --color-heading: var(--vt-c-text-dark-1); /* Keep headings bright white */
+
+  --section-gap: 160px;
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--color-bg);
+  --color-background-soft: var(--color-bg-soft);
+  --color-background-mute: var(--color-bg-mute);
+
+  --color-border: var(--color-border);
+  --color-border-hover: var(--color-border-hover);
+
+  --color-heading: var(--color-heading);
+  --color-text: var(--color-text);
+
+  --section-gap: 160px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--color-bg);
+    --color-background-soft: var(--color-bg-soft);
+    --color-background-mute: var(--color-bg-mute);
+
+    --color-border: var(--color-border);
+    --color-border-hover: var(--color-border-hover);
+
+    --color-heading: var(--color-heading);
+    --color-text: var(--color-text);
+  }
+}
+
+*,
+*::before,
+*::after {
+  color: var(--color-text);
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
