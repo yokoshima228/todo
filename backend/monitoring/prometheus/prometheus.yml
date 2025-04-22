@@ -1,0 +1,19 @@
+global:
+  scrape_interval: 15s # Как часто собирать метрики
+  evaluation_interval: 15s # Как часто вычислять правила
+
+# Правила алертов
+rule_files:
+  # - "alert_rules.yml"
+
+# Конфигурация сборщиков данных
+scrape_configs:
+  # Сбор метрик с нашего API
+  - job_name: 'todo-api'
+    static_configs:
+      - targets: ['localhost:5000'] # Адрес нашего API
+
+  # Сбор собственных метрик Prometheus
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090'] 
